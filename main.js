@@ -117,6 +117,18 @@ let Sravani ={
     hobby: 'Dancing'
 };
 
+ Sravani ={
+    firstName:'Sravani',
+    lastName:'Kalluri',
+    age: 28,
+    hobby: 'Dancing'
+};
+console.log(Sravani);
+
+
+
+
+
 console.log(Sravani);
 console.log(`First name: ${Sravani.firstName}`);
 let sravStr = `${Sravani.firstName} ${Sravani.lastName}, age: ${Sravani.age}`;
