@@ -192,3 +192,54 @@ for(let band of myBands){
     
     `;
 }
+//Functions
+function sayHello(){
+    console.log('Hello');
+}
+const sayHello2= () => {
+    console.log('Hello 2');
+
+}
+sayHello();
+sayHello2();
+
+//Different ways of declaring the same function
+function add(a,b){
+    return a+b;
+}
+//Arrow fuction
+const add2= (a,b) => {
+    return a+b;
+}
+//Function expression
+const add3= function(a,b) {
+    return a+b;
+}
+// Arrow function with implicit return
+const add4 = (a,b) => a+b;
+
+//Arrow function with implicit return and one parameter
+const add5 = a => a+5;
+console.log(add(1,2));
+console.log(add2(1,2));
+console.log(add3(1,2));
+console.log(add4(1,2));
+console.log(add5(1));
+
+class Person{
+    constructor(name, age, hobby){// fiields of the class
+        this.name=name;
+        this. age= age;
+        this.hobby= hobby;
+    }
+    greeting(){//class methods
+        console.log(`Hi, my name is ${this.name} and I am ${this.age} `);
+        console.log('I enjoy : '+ this.hobby);
+
+    }
+    
+
+}
+const SravaniClass = new Person ('Sravani', 28 ,'Dancing');
+    SravaniClass.greeting();
+    console.log(SravaniClass.hobby);
