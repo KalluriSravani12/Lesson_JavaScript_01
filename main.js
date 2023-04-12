@@ -133,3 +133,19 @@ console.log(Sravani);
 console.log(`First name: ${Sravani.firstName}`);
 let sravStr = `${Sravani.firstName} ${Sravani.lastName}, age: ${Sravani.age}`;
 console.log(sravStr);
+
+let SravaniAdvanced={
+    firstName: 'SRAVANI',
+    lastName:'KALLURI',
+    age: 28,
+    hobbies:['programming','reading','games']
+};
+console.log(SravaniAdvanced);//OBJECT
+let SravaniJSON= JSON.stringify(SravaniAdvanced);// Object to JSON
+console.log(SravaniJSON);
+console.log(JSON.parse(SravaniJSON));//Back to object
+//Loop over obbject
+for(let propertyName in SravaniAdvanced){
+    let propertyValue = SravaniAdvanced[propertyName];
+    console.log(propertyName,propertyValue);
+}
