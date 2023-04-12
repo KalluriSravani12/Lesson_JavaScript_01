@@ -1,7 +1,7 @@
 /*Introduction*/
 //Hello World!
 console.log('Hello,world!');
-
+console.log('This is my webpage');
 //Variables
 let greeting= 'Hej från en variabel';
 console.log(greeting);
