@@ -171,7 +171,8 @@ let body = document.querySelector('body');
 //Add the div to the HTML
 body.append(myDiv);
 //Another way to add data
-let myBands=[{
+let myBands=[
+{
     name: 'The Beatles',
     genre:'pop'
 },
@@ -180,3 +181,14 @@ let myBands=[{
     genre:'Rock'
 }
 ];
+//Grab the bands div
+let bandsDiv= document.querySelector('#bands');
+for(let band of myBands){
+    bandsDiv.innerHTML += `
+        <div class="band">
+            <h2>${band.name}</h2>
+            <p> Genre: ${band.genre}</p>
+        </div>
+    
+    `;
+}
