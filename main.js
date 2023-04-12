@@ -125,10 +125,6 @@ let Sravani ={
 };
 console.log(Sravani);
 
-
-
-
-
 console.log(Sravani);
 console.log(`First name: ${Sravani.firstName}`);
 let sravStr = `${Sravani.firstName} ${Sravani.lastName}, age: ${Sravani.age}`;
@@ -149,3 +145,38 @@ for(let propertyName in SravaniAdvanced){
     let propertyValue = SravaniAdvanced[propertyName];
     console.log(propertyName,propertyValue);
 }
+//Loop through object and array inside of object
+for(let propertyName in SravaniAdvanced){                      //loop over object
+    let propertyValue = SravaniAdvanced[propertyName];         //Get value from key
+    if(Array.isArray(propertyValue)==true){                    // Check if array?
+        for(let hobby of propertyValue){                       //loop over array(in is for object, of is for arrays)
+            console.log("Hobby: "+ hobby)
+        }
+    }else{
+        console.log(propertyName + ":"+ propertyValue)
+    }
+}
+
+//Connection to html
+// Ask JS to create a new element
+let myDiv = document.createElement('div')
+//Add some HTML
+myDiv.innerHTML = `
+    <h1> Hello from JS!</h1>
+    <p>This text is from Javascript, my age is ${Sravani.age}</p>
+`;
+// Grab the body tag
+let body = document.querySelector('body');
+
+//Add the div to the HTML
+body.append(myDiv);
+//Another way to add data
+let myBands=[{
+    name: 'The Beatles',
+    genre:'pop'
+},
+{
+    name: 'The rolling stones',
+    genre:'Rock'
+}
+];
